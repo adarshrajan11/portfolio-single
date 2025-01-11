@@ -3,7 +3,7 @@ import { useSpring, animated } from '@react-spring/web';
 import { useEffect, useState } from 'react';
 import SpinningGlobe from './SppinningGlobe';
 import ScrollReveal from '../hoc/ScrollReveal';
-import hero from '../assets/adarsh.png';
+import hero from '../assets/AdarshU.jpeg';
 
 const Hero = () => {
     const [scrollY, setScrollY] = useState(0);

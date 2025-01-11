@@ -1,5 +1,6 @@
 import './App.css';
 import ContactSection from './components/ContactSection';
+import ExperienceSection from './components/ExperienceSection';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProjectShowcase from './components/ProjectShowcase';
@@ -18,6 +19,7 @@ function App() {
           <Header />
           <AnimatedHero />
           <Skills />
+          <ExperienceSection />
           <ProjectShowcase />
           <ContactSection />
         </div>
