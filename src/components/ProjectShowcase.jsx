@@ -5,6 +5,13 @@ import projectData from "../data/projectData";
 const ProjectShowcase = () => {
     const [filter, setFilter] = useState("All");
 
+    const handleClick = (link) => {
+
+        if (link) {
+            window.location.href = link;
+        }
+    }
+
     // Filter projects based on the selected category
     const filteredProjects =
         filter === "All"
@@ -21,8 +28,8 @@ const ProjectShowcase = () => {
                         key={category}
                         onClick={() => setFilter(category)}
                         className={`px-4 py-2 rounded-full ${filter === category
-                                ? "bg-blue-500 text-white"
-                                : "bg-gray-200 dark:bg-gray-700"
+                            ? "bg-blue-500 text-white"
+                            : "bg-gray-200 dark:bg-gray-700"
                             }`}
                     >
                         {category}
@@ -41,6 +48,7 @@ const ProjectShowcase = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.8 }}
                             layout
+                            onClick={() => handleClick(project?.link)}
                         >
                             <img
                                 src={project.image}
